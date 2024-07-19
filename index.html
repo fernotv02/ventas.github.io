@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <script src="app.js" async></script>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <title>Tienda Compra y Recompra</title>
+    <style>
+        .contenedor {
+        position: relative;
+        text-align: center;
+        color: white;
+        background-color: rgb(190, 69, 69); 
+        padding: 5px; 
+        z-index: 1; 
+        }
+
+        .contenedor img {
+            width: 100%;
+            height: auto;
+            opacity: 0.3; 
+        }
+
+        .descripcion-inicio {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 40px;
+            z-index: 2; 
+        }
+
+        .imagenes-debajo {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, 15%); 
+            z-index: 2; 
+        }
+
+        .imagenes-debajo .imagen-cuadro {
+            width: 300px;
+            height: 300px;
+            margin: 0 10px;
+            border-radius: 40px;
+            background-color: rgb(6, 6, 7); 
+            overflow: hidden;
+            position: relative;
+        }
+
+        .imagenes-debajo .imagen-cuadro img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .imagenes-adicionales {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            z-index: 3;
+        }
+
+
+        .imagenes-adicionales .imagen-cuadro img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .pie-pagina {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .pie-pagina .grupo-1,
+        .pie-pagina .grupo-2 {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .pie-pagina .box {
+            flex: 1;
+            padding: 10px 20px;
+        }
+
+        .pie-pagina .box h2 {
+            margin-bottom: 10px;
+        }
+
+        .pie-pagina .box p {
+            margin-bottom: 10px;
+        }
+
+        .red-social a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .red-social a:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="compra y recompra_transparent.png" alt="Compra y Recompra">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="compra.html">Compra</a>
+                <a href="metpagos.html">Métodos de Pago</a>
+                <a href="nosotros.html">Nosotros</a>
+            </div>
+        </nav>
+    </header>
+    <section class="contenedor">
+        <img src="compra y recompra_transparent.png" alt="Compra y Recompra">
+        <div class="descripcion-inicio">
+            <h1>Bienvenido a nuestra tienda</h1> 
+            <h1>___________________________</h1> 
+            <h3>
+                <p>Aquí puedes comprar y vender productos de manera segura y sencilla.</p>
+                <p>Compra y Recompra nace con la finalidad de proporcionar una plataforma segura y fácil de usar para todos.</p>
+                <p>Queremos:</p>
+                <p>Promover la reutilización de productos, evitando que objetos útiles terminen en la basura.</p>
+                <p>Fomentar un consumo responsable, haciendo que cada compra y venta tenga un impacto positivo en el medio ambiente.</p>
+                <p>Crear una comunidad sostenible, donde cada miembro pueda contribuir al cambio y encontrar valor en los productos de segunda mano.</p>
+            </h3>
+        </div>
+        <div class="imagenes-debajo">
+            <div class="imagen-cuadro">
+                <img src="1inicio.png" alt="Imagen 1">
+            </div>
+            <div class="imagen-cuadro">
+                <img src="2inicio.png" alt="Imagen 2">
+            </div>
+            <div class="imagen-cuadro">
+                <img src="3inicio.png" alt="Imagen 3">
+            </div>
+        </div>
+       
+    </section>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="compra y recompra_transparent.png" alt="Logo de Compra y Recompra">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>GRUPO DE TRABAJO</h2>
+                <h2>-Cabrera Rosales Andre Valentino</h2>
+                <h2>-Castro Mallqui Diego Kluivert</h2>
+                <h2>-Fernandez Cieza Luis Fernando</h2>
+                <h2>-Zegarra Masgo Lilian</h2>
+            </div>
+            <div class="box">
+                <h2>CONTACTO</h2>
+                <p>Teléfonos:</p>
+                <p>+51 927853017</p>
+                <p>+51 927431877</p>
+                <p>+51 966118222</p>
+                <p>+51 961068049</p>
+                <p>Email: comprareycompra.com</p>
+            </div>
+            <div class="box">
+                <h2>SÍGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://www.facebook.com/profile.php?id=61562533695282" class="fa fa-facebook" target="_blank" title="Síguenos en Facebook"></a>
+                    <a href="https://www.instagram.com/compra_y_venta_3?igsh=MW5meTBsaWtxOWtmcg%3D%3D" class="fa fa-instagram" target="_blank" title="Síguenos en Instagram"></a>
+                    <a href="https://wa.me/927853017" class="fa fa-whatsapp" target="_blank" title="Contáctanos por WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-3">
+            <small>&copy; 2024 <b>Compra y Recompra</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
